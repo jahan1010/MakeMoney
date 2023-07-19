@@ -1,3 +1,7 @@
+ .u-section-1 {
+  background-image: none;
+}
+
 .u-section-1 .u-sheet-1 {
   min-height: 400px;
 }
@@ -16,4 +20,26 @@
   background-image: none;
   margin: 12px auto 60px;
   padding: 8px 65px;
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 573px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: 168px;
+  }
+} .u-section-2 {
+  background-image: none;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 400px;
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 243px;
+  }
 }
