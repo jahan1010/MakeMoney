@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-max-width: 700px;
+max-width: 900px;
 margin: 5rem auto 0;
 padding: 3rem 5rem;
 border: 2px solid var(--extra-light);
