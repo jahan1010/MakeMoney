@@ -146,6 +146,7 @@ form {
 
 @media screen and (width < 600px) {
   .container {
+    max-width: 800px;
     margin: 1rem auto 0;
     padding: 1rem 1rem;
     border: none;
